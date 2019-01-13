@@ -14,6 +14,10 @@ archivo <-'Pag_Web.html'
 # Leyendo el HTML del archivo
 webpage <- read_html(archivo)
 
+##########################################################
+############# Extracción del texto noticia ###############
+##########################################################
+
 #Extrayendo contenido en la clase justificado
 contenidoWebNoticia <- html_nodes(webpage,'p')
 
@@ -32,6 +36,8 @@ textoNoticia <- gsub("&acute;","á",textoNoticia)
 textoNoticia <- gsub("&acute;","é",textoNoticia)
 textoNoticia <- gsub("&acute;","í",textoNoticia)
 textoNoticia <- gsub("&acute;","ó",textoNoticia)
+
+
 textoNoticia <- gsub("&acute;","ú",textoNoticia)
 textoNoticia <- gsub("\r","",textoNoticia)
 textoNoticia <- gsub(";","",textoNoticia)
@@ -58,7 +64,9 @@ tablaPalabras <- table(unlistNoticias)
 #Pasando la información a una data frame
 dfPalabrasNoticia <-as.data.frame(tablaPalabras)
 
-#==============
+##########################################################
+############ Extraccion información tabla ################
+##########################################################
 
 #Extrayendo contenido de la tabla a través del tag table
 tablaProductos <- html_nodes(webpage,'table')
@@ -81,7 +89,11 @@ install.packages('ggplot2')
 #Graficando los productos
 library('ggplot2')
 
-tablaProductosExtraidos <- gsub("[.]","",textoNoticia)
+# Limpiando $ comas y cambios de puntos por coma
+tablaProductosExtraidos$Precio <- gsub("//$","",tablaProductosExtraidos$Precio)
+tablaProductosExtraidos$Precio <- gsub("[.]","",tablaProductosExtraidos$Valor)
+tablaProductosExtraidos$Precio <- as.numeric(gsub(",",".",tablaProductosExtraidos$Valor))
+
 #Gráfico Barra
 tablaProductosExtraidos %>%
   ggplot() +
@@ -94,4 +106,8 @@ tablaProductosExtraidos %>%
   geom_boxplot(aes(x = Producto, y = Precio)) +
   
  
+
+
+#############################################
+
 
