@@ -1,0 +1,6 @@
+"Producto" "Marca" "Precio" "Imagen de referencia" "Supermercado"
+"1" "Yoguth Batido" "Colun" "$220" NA "Lider"
+"2" "Arandanos" "-" "$1.390" NA "Lider"
+"3" "Huevo mediano 30 un" "Yemita" "$3.490" NA "Lider"
+"4" "Salmon" "Lider" "$2.990" NA "Lider"
+"5" "Leche descremda" "Colun" "$790" NA "Lider"

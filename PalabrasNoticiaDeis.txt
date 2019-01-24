@@ -1,0 +1,3 @@
+"unlistNoticiasDeis" "Freq"
+"1" "c(\"comprende\", \"el\", \"registro\", \"y\", \"monitoreo\", \"activo\", \"de\", \"los\", \"accidentes\", \"del\", \"trabajo\", \"entendidos\", \"como\", \"“toda\", \"lesión\", \"que\", \"una\", \"persona\", \"sufra\", \"a\", \"causa\", \"o\", \"con\", \"ocasión\", \"del\", \"trabajo\", \"y\", \"que\", \"le\", \"produzca\", \"incapacidad\", \"o\", \"muerte”\", \"que\", \"corresponden\", \"a\", \"aquellas\", \"las\", \"causadas\", \"de\", \"una\", \"manera\", \"directa\", \"por\", \"el\", \"ejercicio\", \"de\", \"la\", \"profesión\", \"o\", \"el\", \"trabajo\", \"que\", \"realice\", \"una\", \"persona\", \"y\", 
+\"le\", \"produzca\", \"incapacidad\", \"o\", \"muerte\")" 1
